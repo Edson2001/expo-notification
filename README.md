@@ -25,7 +25,7 @@ Certifique-se de ter o seguinte instalado em seu ambiente de desenvolvimento:
 POST https://server_url/token HTTP/1.1
 Content-Type: application/json
 {
-	"token": "ExponentPushToken[token]",
+	"token": "ExponentPushToken[token do aplicativo]",
 	"channelName": "opcional",
 	"title": "texto",
 	"message": "testando push notify"
