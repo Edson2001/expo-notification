@@ -1,6 +1,7 @@
 # Projeto de Notificações Push com Expo e PHP
 
 Este projeto é um exemplo de como implementar notificações push em um aplicativo móvel criado com Expo e como receber e processar os tokens de notificação no servidor PHP. As notificações push permitem enviar mensagens importantes e atualizações para os usuários, mesmo quando o aplicativo não está em primeiro plano.
+
 O servidor PHP é responsável por receber os tokens de notificação push enviados pelos dispositivos Expo e, em seguida, usa a biblioteca ExponentPhpSDK para enviar notificações push para os dispositivos registrados.
 
 ## Funcionalidades
