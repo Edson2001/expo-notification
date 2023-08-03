@@ -21,7 +21,7 @@ Certifique-se de ter o seguinte instalado em seu ambiente de desenvolvimento:
 
 ## Exemplo:
 
-``
+``json
 POST https://server_url/token HTTP/1.1
 Content-Type: application/json
 {
