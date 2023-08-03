@@ -9,9 +9,6 @@ use Psr\Http\Server\RequestHandlerInterface;
 
 $app = AppFactory::create();
 
-/* $app->options('/{routes:.+}', function ($request, $response, $args) {
-    return $response;
-}); */
 
 $app->add(function (Request $request, RequestHandlerInterface $handler) {
     $response = $handler->handle($request);
@@ -19,23 +16,19 @@ $app->add(function (Request $request, RequestHandlerInterface $handler) {
         ->withHeader('Access-Control-Allow-Origin', '*')
         ->withHeader('Access-Control-Allow-Headers', 'X-Requested-With, Content-Type, Accept, Origin, Authorization')
         ->withHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, PATCH, OPTIONS');
-
     return $response;
 });
 
 $app->addErrorMiddleware(true, true, true);
 
 $app->get('/', function (Request $request, Response $response) {
-    $response->getBody()->write('EXPO NOTIFICATION BY RED-EVELOPER');
+    $response->getBody()->write('EXPO NOTIFICATION');
     return $response;
 });
 
-/* $app->map(['GET', 'POST', 'PUT', 'DELETE', 'PATCH'], '/{routes:.+}', function($req, $res) {
-    $handler = $this->notFoundHandler; 
-    return $handler($req, $res);
-}); */
-
-$app->post("/notify", "app\Notification:notify");
+$app->post("/notify", "app\\notification\PushNotification:notify");
+$app->post("/registerToken", "app\\notification\RegisterToken:registerToken");
+$app->get("/tokens", "app\\notification\TokenList:listTokens");
 
 $app->run();
 
