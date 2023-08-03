@@ -22,7 +22,7 @@ $app->add(function (Request $request, RequestHandlerInterface $handler) {
 $app->addErrorMiddleware(true, true, true);
 
 $app->get('/', function (Request $request, Response $response) {
-    $response->getBody()->write('EXPO NOTIFICATION');
+    $response->getBody()->write('EXPO NOTIFICATION SERVER NOTIFICATION');
     return $response;
 });
 
