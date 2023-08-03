@@ -22,7 +22,7 @@ Certifique-se de ter o seguinte instalado em seu ambiente de desenvolvimento:
 ## Exemplo:
 
 ```json
-POST (https://notification-r9w4.onrender.com/notify) HTTP/1.1
+POST https://notification-r9w4.onrender.com/notify HTTP/1.1
 Content-Type: application/json
 {
 	"token": "ExponentPushToken[token do aplicativo]",
