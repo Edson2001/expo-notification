@@ -18,3 +18,16 @@ Certifique-se de ter o seguinte instalado em seu ambiente de desenvolvimento:
 - Composer (https://getcomposer.org/)
 - Docker (https://www.docker.com/get-started)
 - Slim framework  (https://www.slimframework.com/docs/v4/objects/response.html#the-response-status)
+
+## Exemplo:
+
+``
+POST https://server_url/token HTTP/1.1
+Content-Type: application/json
+{
+	"token": "ExponentPushToken[token]",
+	"channelName": "opcional",
+	"title": "texto",
+	"message": "testando push notify"
+}
+``
